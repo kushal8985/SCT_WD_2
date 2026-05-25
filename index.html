@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stopwatch App</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- LOADER -->
+
+  <div id="loader">
+
+    <div class="spinner"></div>
+
+    <h2>Loading...</h2>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="container">
+
+    <div class="stopwatch-card">
+
+      <h1>STOPWATCH</h1>
+
+      <div class="time" id="display">
+
+        00 : 00 : 00
+
+      </div>
+
+      <div class="buttons">
+
+        <button id="startBtn" class="start">
+
+          Start
+
+        </button>
+
+        <button id="pauseBtn" class="pause">
+
+          Pause
+
+        </button>
+
+        <button id="resetBtn" class="reset">
+
+          Reset
+
+        </button>
+
+        <button id="lapBtn" class="lap">
+
+          Lap
+
+        </button>
+
+      </div>
+
+      <div class="lap-container">
+
+        <h2>Lap Times</h2>
+
+        <ul id="laps"></ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

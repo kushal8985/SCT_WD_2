@@ -1,0 +1,174 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:#050816;
+  color:white;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* LOADER */
+
+#loader{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:#050816;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:9999;
+}
+
+.spinner{
+  width:70px;
+  height:70px;
+  border:6px solid rgba(255,255,255,0.1);
+  border-top:6px solid #00f5c4;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  100%{
+    transform:rotate(360deg);
+  }
+
+}
+
+#loader h2{
+  margin-top:20px;
+  font-family:'Syne',sans-serif;
+}
+
+/* CONTAINER */
+
+.container{
+  width:100%;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CARD */
+
+.stopwatch-card{
+  width:100%;
+  max-width:500px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(15px);
+  border-radius:20px;
+  padding:40px;
+  text-align:center;
+  box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+
+.stopwatch-card h1{
+  font-size:45px;
+  margin-bottom:30px;
+  font-family:'Syne',sans-serif;
+  color:#00f5c4;
+}
+
+/* TIME */
+
+.time{
+  font-size:60px;
+  font-weight:bold;
+  margin-bottom:35px;
+  letter-spacing:3px;
+}
+
+/* BUTTONS */
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.buttons button{
+  padding:15px 30px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:18px;
+  transition:0.3s;
+  font-weight:600;
+}
+
+.start{
+  background:#00f5c4;
+  color:black;
+}
+
+.pause{
+  background:#ffb703;
+  color:black;
+}
+
+.reset{
+  background:#ef233c;
+  color:white;
+}
+
+.lap{
+  background:#7b5cf0;
+  color:white;
+}
+
+.buttons button:hover{
+  transform:translateY(-5px);
+}
+
+/* LAP TIMES */
+
+.lap-container{
+  margin-top:40px;
+  text-align:left;
+}
+
+.lap-container h2{
+  margin-bottom:20px;
+  color:#00f5c4;
+}
+
+#laps{
+  list-style:none;
+  max-height:200px;
+  overflow-y:auto;
+}
+
+#laps li{
+  background:rgba(255,255,255,0.08);
+  margin-bottom:10px;
+  padding:15px;
+  border-radius:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+  .time{
+    font-size:40px;
+  }
+
+  .buttons button{
+    width:100%;
+  }
+
+}
